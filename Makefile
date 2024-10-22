@@ -6,7 +6,7 @@
 #    By: omed <omed@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/06 16:48:42 by omed              #+#    #+#              #
-#    Updated: 2024/10/20 15:55:09 by omed             ###   ########.fr        #
+#    Updated: 2024/10/22 21:12:25 by omed             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,12 +21,15 @@ LIBMLXDIR := minilibx-linux
 LIBFT := $(LIBFTDIR)/libft.a
 LIBMLX := $(LIBMLXDIR)/libmlx_Linux.a
 #Sources
-SRCS := $(addprefix $(SRCDIR)/, main.c)
+SRCS := $(addprefix $(SRCDIR)/, main.c  memory_management.c map_dimensions.c \
+	drawing_utils.c point_operations.c input_handling.c load_map.c projections.c\
+	draw_map.c)
 
 #Objects
 OBJS := $(addprefix $(OBJDIR)/, $(notdir $(SRCS:.c=.o)))
 
 #Header
+HEADERS := $(addprefix $(SRCDIR)/, fdf.h)
 MLXHEADER := /usr/local/include
 
 #Flags
